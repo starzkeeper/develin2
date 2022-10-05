@@ -20,7 +20,7 @@ class ProductAPIView(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     pagination_class = ProductPagination
 
-    @action(methods=['get'],detail=False)
+    @action(methods=['get'],detail=False)123
     def category(self,request):
         cats = Category.objects.all()
         return Response({'cats': [c.name for c in cats]})
